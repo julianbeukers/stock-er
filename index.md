@@ -1,1 +1,4 @@
 # Stock-er
+
+## Overview
+The efficient market hypothesis posits that stock market prices arise from the circumstances in which stocks are being traded thus being almost entirely impossible to predict. Stock market prediction programs challenge this notion by using a data set of past market prices to attempt to predict how a stock price will behave in the future. Under the efficient market’s hypothesis, factors that determine the prices of stocks in the future are in the future, and it is thus impossible to accurately predict future prices of stocks today. Stock market predictors use the available data and trends from the trading company’s past to predict future prices with a degree of accuracy. This documentation intends to discuss how stock market prediction programs work, their weaknesses and their strengths against other price projection models.
