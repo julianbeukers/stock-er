@@ -1,4 +1,4 @@
-# Stock-er
+# Stock-er, a Predictive model for stock prices
 
 # 1.	Introduction
 ## 1.1	Purpose of this document
