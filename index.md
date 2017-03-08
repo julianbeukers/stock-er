@@ -1,7 +1,7 @@
 # Stock-er
 
 # 1.	Introduction
- ## 1.1	Purpose of this document
+## 1.1	Purpose of this document
  The purpose of this document is to give technical information about the design of an algorithm that can predict stock market price changes.
 ## 1.2 Intended Audience
 This paper targets stock market analysts, investors, and stockholders as it would make it more scientific to trade in the stock market.
