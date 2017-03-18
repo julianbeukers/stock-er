@@ -7,3 +7,9 @@
 # 2. Collect Dataset
 # 3. Write Script
 # 4. Analyze Graph
+
+# Step 1: The four dependencies include:
+# pip install csv - To read data from the stock prices
+# pip install numpy - To perform calculations
+# pip install scikit-learn - build a predictive model
+# pip install matplotlib - plot datapoints on the model to analyze
