@@ -61,10 +61,15 @@ To fit the data points in the models, we have
 Next, we plots the initial data points as black dots with the data label and plot each of our models as well plotting the initial datapoints 
 `plt.scatter(dates, prices, color= 'black', label= 'Data')` 
 The graphs are plotted with the help of SVR object in scikit-learn using the dates matrix as our parameter. Each will be a distinct color and and give them a distinct label. The predict_prices returns predictions from each of our models.
+
 `plt.plot(dates, svr_rbf.predict(dates), color= 'red', label= 'RBF model') # plotting the line made by the RBF kernel`
+
 `plt.plot(dates,svr_lin.predict(dates), color= 'green', label= 'Linear model') # plotting the line made by linear kernel`
+
 `plt.plot(dates,svr_poly.predict(dates), color= 'blue', label= 'Polynomial model') # plotting the line made by polynomial kernel`
+
 `plt.xlabel('Date') # Setting the x-axis`
+
 `plt.ylabel('Price') # Setting the y-axis`
 Finally, it returns predictions from each of our models
 `return svr_rbf.predict(x)[0], svr_lin.predict(x)[0], svr_poly.predict(x)[0]`
