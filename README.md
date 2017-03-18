@@ -84,7 +84,7 @@ The four dependencies include:
 # 5. Result
 <p align="center">
     <img src = "http://kausthubjadhav.me/stock-er/graph.png">
-    <img src = "http://kausthubjadhav.me/stock-er/http://kausthubjadhav.me/stock-er/command_prompt_result.JPG">
+    <img src = "http://kausthubjadhav.me/stock-er/command_prompt_result.JPG">
 </p>
 
 
