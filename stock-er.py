@@ -13,3 +13,9 @@
 # pip install numpy - To perform calculations
 # pip install scikit-learn - build a predictive model
 # pip install matplotlib - plot datapoints on the model to analyze
+
+# Step 2: Collecting dataset (Apple stocks from the past 30 days)
+# Go to finance.google.com
+# Look up NASDAQ:AAPL
+# Select "Historical prices"
+# Select "Download to spreadsheet"
