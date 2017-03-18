@@ -113,3 +113,9 @@ def predict_price(dates, prices, x):
 	plt.show() # To display result on screen
 
 	return svr_rbf.predict(x)[0], svr_lin.predict(x)[0], svr_poly.predict(x)[0] # returns predictions from each of our models
+
+get_data('aapl.csv') # calling get_data method by passing the csv file to it
+
+predicted_price = predict_price(dates, prices, 29)
+
+print('The predicted prices are:', predicted_price)
