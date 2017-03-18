@@ -43,16 +43,13 @@ def get_data(filename):
 	Reads data from a file (aapl.csv) and adds data to
 	the lists dates and prices
 	'''
+	# Use the with as block to open the file and assign it to csvfile 
 	with open(filename, 'r') as csvfile:
+		# csvFileReader allows us to iterate over every row in our csv file
 		csvFileReader = csv.reader(csvfile)
 		next(csvFileReader)	# skipping column names
 		for row in csvFileReader:
-			dates.append(int(row[0].split('-')[0]))
-			prices.append(float(row[1]))
-
-			print ('dates = ', dates)
-			print ('prices =', prices)
+			dates.append(int(row[0].split('-')[0])) # Only gets day of the month which is at index 0
+			prices.append(float(row[1])) # Convert to float for more precision
 
 	return
-
-get_data("aapl.csv")
