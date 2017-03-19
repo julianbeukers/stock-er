@@ -1,5 +1,5 @@
 # In this program, I attempt to build three different models that
-# predict the prices of Apple Stock
+# predict the prices of Snap Stock
 # then plot them all on a graph to compare the results
 
 # The steps would be:
@@ -16,7 +16,7 @@
 
 # Step 2: Collecting dataset (Apple stocks from the past 30 days)
 # Go to finance.google.com
-# Look up NASDAQ:AAPL
+# Look up NYSE:SNAP
 # Select "Historical prices"
 # Select "Download to spreadsheet"
 
@@ -40,7 +40,7 @@ prices = []
 
 def get_data(filename):
 	'''
-	Reads data from a file (aapl.csv) and adds data to
+	Reads data from a file (snap.csv) and adds data to
 	the lists dates and prices
 	'''
 	# Use the with as block to open the file and assign it to csvfile 
@@ -114,7 +114,7 @@ def predict_price(dates, prices, x):
 
 	return svr_rbf.predict(x)[0], svr_lin.predict(x)[0], svr_poly.predict(x)[0] # returns predictions from each of our models
 
-get_data('aapl.csv') # calling get_data method by passing the csv file to it
+get_data('snap.csv') # calling get_data method by passing the csv file to it
 
 predicted_price = predict_price(dates, prices, 29)
 
