@@ -5,13 +5,13 @@
 
 **Table of Contents**
 - [1.0 Introduction](#introduction)
- * [1.1 Purpose of this document](#purpose)
- * [1.2	Intended Audience](#audience)
- * [1.3	Scope](#scope)
+	- [1.1 Purpose of this document](#purpose)
+ 	- [1.2	Intended Audience](#audience)
+ 	- [1.3	Scope](#scope)
 - [2.0 General Overview](#overview)
 - [3.0 Summary of Functions](#functions_summary)
- * [3.1.1 `get_data` method](#get_data)
- * [3.1.2 `predict_prices` method](#predict_prices)
+ 	- [3.1.1 `get_data` method](#get_data)
+ 	- [3.1.2 `predict_prices` method](#predict_prices)
 - [4.0 Dependencies](#dependencies)
 - [5.0	Usage](#usage)
 - [6.0 Result](#result)
