@@ -4,17 +4,17 @@
 </p>
 
 **Table of Contents**
-- [1.0 Introduction](# 1.0 introduction)
- * [1.1 Purpose of this document](# 1.1 purpose of this document)
- * [1.2	Intended Audience](# 1.2 Intended Audience)
- * [1.3	Scope](# 1.3 Scope)
-- [2.0 General Overview](# 2.0 General Overview)
-- [3.0 Summary of Functions](# 3.0 Summary of Functions)
- * [3.1.1 `get_data` method](# 3.1.1 `get_data` method)
- * [3.1.2 `predict_prices` method](# 3.1.2 `predict_prices` method)
-- [4.0 Dependencies](# 4.0 Dependencies)
-- [5.0	Usage](# 5.0 Usage)
-- [# 6.0 Result](# 6.0 Result)
+- [1.0 Introduction](#introduction)
+ * [1.1 Purpose of this document](#purpose)
+ * [1.2	Intended Audience](#audience)
+ * [1.3	Scope](#scope)
+- [2.0 General Overview](#overview)
+- [3.0 Summary of Functions](#functions_summary)
+ * [3.1.1 `get_data` method](#get_data)
+ * [3.1.2 `predict_prices` method](#predict_prices)
+- [4.0 Dependencies](#dependencies)
+- [5.0	Usage](#usage)
+- [# 6.0 Result](#result)
 
 # 1.0 Introduction
 ## 1.1	Purpose of this document
