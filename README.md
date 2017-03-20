@@ -1,8 +1,7 @@
 # Stock-er, a predictive model for stock Prices
-
-![](https://i1.wp.com/www.infoeuropefx.com/wp-content/uploads/2017/03/snapchat-shares.jpg?resize=620%2C330&ssl=1 )
-
-
+<p align="center">
+	<img src = "https://i1.wp.com/www.infoeuropefx.com/wp-content/uploads/2017/03/snapchat-shares.jpg?resize=620%2C330&ssl=1">
+</p>
 
 **Table of Contents**
 
