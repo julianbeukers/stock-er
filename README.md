@@ -4,11 +4,19 @@
 </p>
 
 **Table of Contents**
+- [1.0 Introduction](# 1.0 introduction)
+ * [1.1 Purpose of this document](# 1.1 purpose of this document)
+ * [1.2	Intended Audience](# 1.2 Intended Audience)
+ * [1.3	Scope](# 1.3 Scope)
+- [2.0 General Overview](# 2.0 General Overview)
+- [3.0 Summary of Functions](# 3.0 Summary of Functions)
+ * [3.1.1 `get_data` method](# 3.1.1 `get_data` method)
+ * [3.1.2 `predict_prices` method](# 3.1.2 `predict_prices` method)
+- [4.0 Dependencies](# 4.0 Dependencies)
+- [5.0	Usage](# 5.0 Usage)
+- [# 6.0 Result](# 6.0 Result)
 
-[TOCM]
-
-[TOC]
-# 1.0	Introduction
+# 1.0 Introduction
 ## 1.1	Purpose of this document
 The purpose of this document is to give technical information about the design of an algorithm that can predict stock market price changes.
 ## 1.2	Intended Audience
@@ -46,9 +54,9 @@ It will be such that the distances between the closest points in each of the two
 </p>
 Support Vector Machine's can be used for regression as well. The support vector regression is a type of SVM that uses the space between data points as a margin of error and predicts the most likely next point in a dataset.
 Linear support vector regression model takes in 3 parameters: 
-1. `kernel`: type of svm
-2. `C`: penalty parameter of the error term
-3. `gamma`: defines how far too far is.
+* `kernel`: type of svm
+* `C`: penalty parameter of the error term
+* `gamma`: defines how far too far is.
 
 Two things are required when using an SVR, a line with the largest minimum margin and a line that correctly separates as many instances as possible. Since we can't have both, C determines how much we want the latter.
 `1e3 in svr_lin = SVR(kernel= 'linear', C= 1e3) #denotes 1000.` 
