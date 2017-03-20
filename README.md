@@ -15,32 +15,31 @@
 - [4.0 Dependencies](#dependencies)
 - [5.0	Usage](#usage)
 - [6.0 Result](#result)
+- [7.0 Credits](#credit)
 
-<a name="introduction"></a>
-1.0 Introduction
-1.1 Purpose of this document
+# <a name="introduction"></a> 1.0 Introduction
+# <a name="purpose"></a> 1.1 Purpose of this document
 The purpose of this document is to give technical information about the design of an algorithm that can predict stock market price changes.
-## 1.2	Intended Audience
+## <a name="audience"></a> 1.2	Intended Audience
 This paper targets stock market analysts, investors, and stockholders as it would make it more scientific to trade in the stock market.
-## 1.3	Scope
+## <a name="scope"></a> 1.3	Scope
 This paper targets stock market analysts, investors, and stockholders as it would make it more scientific to trade in the stock market.
-# 2.0	General Overview
+# <a name="overview"></a> 2.0	General Overview
 The efficient market hypothesis posits that stock market prices arise from the circumstances in which stocks are being traded thus being almost entirely impossible to predict. Stock market prediction programs challenge this notion by using a data set of past market prices to attempt to predict how a stock price will behave in the future. Under the efficient market’s hypothesis, factors that determine the prices of stocks in the future are in the future, and it is thus impossible to accurately predict future prices of stocks today. Stock market predictors use the available data and trends from the trading company’s past to predict future prices with a degree of accuracy. This paper intends to discuss how stock market prediction programs work, their weaknesses and their strengths against other price projection models.
 <p align="center">
 	<img src = "http://www.romeconomics.com/wp-content/uploads/2013/08/EfficientMarkets.png">
 </p>
 There are several categories of data that can be used when designing a price projection algorithm. These categories and factors summarize a company’s financial history in easy to crunch numbers. These factors are; sentiment analysis, past prices, sales growth and the dividends that the company has been paying out to its stockholders. These factors when summarized indicate a company’s vital statistics, and they can be manipulated to predict which circumstances will affect a company’s price in the future and how the company will respond to that. To create a software program that analyzes this data involves installing dependencies, collecting the dataset of the above factors, inputting the script of these factors into the program and finally analyzing the resultant graph. Stock market prices in the future can thus be predicted with relative accuracy by extrapolating the graph.
-<a name="functions_summary"></a>
-# 3.0 Summary of Functions
 
-## 3.1.1 `get_data` method
+# <a name="functions_summary"></a> 3.0 Summary of Functions
+## <a name="get_data"></a> 3.1.1 `get_data` method
 The `get_data` method reads data from a file (`snap.csv`) and adds data to the lists dates and prices. It uses the with as block to open the file and assigns it to `csvfile.csv`. `FileReader` allows us to iterate over every row in our csv file. Furthermore, `next(csvFileReader)` skips column names.
 
 `dates.append(int(row[0].split('-')[0]))` gets day of the month which is at index zero since dates are in the format [date]-[month]-[year].
 
 `prices.append(float(row[1])) row[1]` is converted to float for more precision.
 
-## 3.1.2 `predict_prices` method
+## # <a name="predict_prices"></a>  3.1.2 `predict_prices` method
 This method builds the predictive model and graphs it. It takes three parameters: dates, prices, and x (the order of elements). This function creates three models, each of them will be a type of support vector machine. A support vector machine is a linear separator.
 <p align="center">
 	<img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Svm_max_sep_hyperplane_with_margin.png/220px-Svm_max_sep_hyperplane_with_margin.png">
@@ -64,8 +63,7 @@ Two things are required when using an SVR, a line with the largest minimum margi
 Next we make a polynomial SVR because, in math folklore, the no free lunch theorem states that there are no guarantees for one optimization to work better than the other. So we'll try both.
 `svr_poly = SVR(kernel= 'poly', C= 1e3, degree= 2)`
 Finally, we create one more SVR using a radial basis function. RBF defines similarity to be the Euclidean distance between two inputs If both are right on top of each other, the max similarity is one, if too far it is a zero. 
-`svr_rbf = SVR(kernel= 'rbf', C= 1e3, gamma= 0.1)`
-# To fit the data points in the models, we have 
+`svr_rbf = SVR(kernel= 'rbf', C= 1e3, gamma= 0.1)` # To fit the data points in the models, we have 
 `svr_rbf.fit(dates, prices) svr_lin.fit(dates, prices) svr_poly.fit(dates, prices)`
 Next, we plots the initial data points as black dots with the data label and plot each of our models as well plotting the initial datapoints `plt.scatter(dates, prices, color= 'black', label= 'Data')` 
 The graphs are plotted with the help of SVR object in scikit-learn using the dates matrix as our parameter. Each will be a distinct color and and give them a distinct label. The `predict_prices` returns predictions from each of our models.
@@ -79,7 +77,7 @@ Finally, it returns predictions from each of our models return
 
 `svr_rbf.predict(x)[0], svr_lin.predict(x)[0], svr_poly.predict(x)[0]`
 
-# 4.0	Dependencies
+# <a name="dependencies"></a> 4.0 Dependencies
 The dependencies that are installed in the program need to enable the user to collect the dataset with ease, calculate and interpret the numbers in the dataset, build a predictive model based on the past dataset and build a projective model for the future of the stock prices. When running in synchrony, the dependencies help in developing a support vector machine. A support vector machine primarily is a linear separator that takes data that is classified and attempts to predict and classify unclassified data. The support vector machine aid in the calculation of the support vector regression which can be calculated to accurately determine how each addition of data or alteration of market factors will alter the price of stocks.
 The four dependencies include: 
 `pip install csv` : To read data from the stock prices (https://pypi.python.org/pypi/csv) 
@@ -90,9 +88,9 @@ The four dependencies include:
 
 `pip install matplotlib` : To plot datapoints on the model to analyze (http://matplotlib.org/)
 
-# 5.0	Usage
+# <a name="usage"></a> 5.0 Usage
 `run stock-er`
-# 6.0	Result
+# <a name="result"></a> 6.0 Result
 <p align="center">
     <img src = "http://kausthubjadhav.me/stock-er/snap_graph.png">
     <img src = "http://kausthubjadhav.me/stock-er/snap_command_prompt_result.JPG">
@@ -103,4 +101,4 @@ On analyzing the graph, we see that each of our models shows up in the graph and
 The support vector regression estimates how each addition or modification of data affects the prediction and outlook on the future prices of stock. The support vector regression can be developed by using either the linear function model, the polynomial functions model or the ration basis model. The different results can then be plotted on one or different graphs for analysis). These graphs are then compared with the actual data from the company’s history and the model that matches the historical data and trends can then be used to predict how the figures will react to market stimuli.
 
 The efficient market hypothesis states that the factors that determine the price of stocks in the future are in the future thus making the future prices of stocks random and unpredictable. However, using the stock market prediction methods outlined in this program simplifies the process of prediction by removing the random element out of stock market price futures. The use of support vector machines for classification and regression analyses gives a scientific element to the prediction of stock market prices rather than relying on hunches and intuition. A combination of the thus computed results and sound investment planning will, therefore, raise an investor’s chance of stock market success.
-# 7.0	Credits
+#  <a name="credits"></a> 7.0 Credits
