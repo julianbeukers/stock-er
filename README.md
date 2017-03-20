@@ -21,13 +21,17 @@ The efficient market hypothesis posits that stock market prices arise from the c
 	<img src = "http://www.romeconomics.com/wp-content/uploads/2013/08/EfficientMarkets.png">
 </p>
 There are several categories of data that can be used when designing a price projection algorithm. These categories and factors summarize a company’s financial history in easy to crunch numbers. These factors are; sentiment analysis, past prices, sales growth and the dividends that the company has been paying out to its stockholders. These factors when summarized indicate a company’s vital statistics, and they can be manipulated to predict which circumstances will affect a company’s price in the future and how the company will respond to that. To create a software program that analyzes this data involves installing dependencies, collecting the dataset of the above factors, inputting the script of these factors into the program and finally analyzing the resultant graph. Stock market prices in the future can thus be predicted with relative accuracy by extrapolating the graph.
-# 3.0	Summary of Functions
-## 3.1.1	`get_data` method
+
+# 3.0 Summary of Functions
+
+## 3.1.1 `get_data` method
 The `get_data` method reads data from a file (`snap.csv`) and adds data to the lists dates and prices. It uses the with as block to open the file and assigns it to `csvfile.csv`. `FileReader` allows us to iterate over every row in our csv file. Furthermore, `next(csvFileReader)` skips column names.
+
 `dates.append(int(row[0].split('-')[0]))` gets day of the month which is at index zero since dates are in the format [date]-[month]-[year].
+
 `prices.append(float(row[1])) row[1]` is converted to float for more precision.
 
-## 3.1.2	`predict_prices` method
+## 3.1.2 `predict_prices` method
 This method builds the predictive model and graphs it. It takes three parameters: dates, prices, and x (the order of elements). This function creates three models, each of them will be a type of support vector machine. A support vector machine is a linear separator.
 <p align="center">
 	<img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Svm_max_sep_hyperplane_with_margin.png/220px-Svm_max_sep_hyperplane_with_margin.png">
@@ -68,8 +72,14 @@ Finally, it returns predictions from each of our models return
 
 # 4.0	Dependencies
 The dependencies that are installed in the program need to enable the user to collect the dataset with ease, calculate and interpret the numbers in the dataset, build a predictive model based on the past dataset and build a projective model for the future of the stock prices. When running in synchrony, the dependencies help in developing a support vector machine. A support vector machine primarily is a linear separator that takes data that is classified and attempts to predict and classify unclassified data. The support vector machine aid in the calculation of the support vector regression which can be calculated to accurately determine how each addition of data or alteration of market factors will alter the price of stocks.
-The four dependencies include: pip install csv : 
-To read data from the stock prices (https://pypi.python.org/pypi/csv) pip install numpy : To perform calculations (http://www.numpy.org/) `pip install scikit-learn` : To build a predictive model (http://scikit-learn.org/) `pip install matplotlib` : To plot datapoints on the model to analyze (http://matplotlib.org/)
+The four dependencies include: 
+`pip install csv` : To read data from the stock prices (https://pypi.python.org/pypi/csv) 
+
+`pip install numpy` : To perform calculations (http://www.numpy.org/) 
+
+`pip install scikit-learn` : To build a predictive model (http://scikit-learn.org/) 
+
+`pip install matplotlib` : To plot datapoints on the model to analyze (http://matplotlib.org/)
 
 # 5.0	Usage
 `run stock-er`
