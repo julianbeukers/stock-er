@@ -101,4 +101,13 @@ On analyzing the graph, we see that each of our models shows up in the graph and
 The support vector regression estimates how each addition or modification of data affects the prediction and outlook on the future prices of stock. The support vector regression can be developed by using either the linear function model, the polynomial functions model or the ration basis model. The different results can then be plotted on one or different graphs for analysis). These graphs are then compared with the actual data from the company’s history and the model that matches the historical data and trends can then be used to predict how the figures will react to market stimuli.
 
 The efficient market hypothesis states that the factors that determine the price of stocks in the future are in the future thus making the future prices of stocks random and unpredictable. However, using the stock market prediction methods outlined in this program simplifies the process of prediction by removing the random element out of stock market price futures. The use of support vector machines for classification and regression analyses gives a scientific element to the prediction of stock market prices rather than relying on hunches and intuition. A combination of the thus computed results and sound investment planning will, therefore, raise an investor’s chance of stock market success.
-#  <a name="credits"></a> 7.0 Credits
+#  <a name="credit"></a> 7.0 Credits
+* http://docs.opencv.org/2.4/doc/tutorials/ml/introduction_to_svm/introduction_to_svm.html
+* https://nicholastsmith.wordpress.com/2016/04/20/stock-market-prediction-using-multi-layer-perceptrons-with-tensorflow/
+* http://eugenezhulenev.com/blog/2014/11/14/stock-price-prediction-with-big-data-and-machine-learning/
+* http://jspauld.com/post/35126549635/how-i-made-500k-with-machine-learning-and-hft
+* https://i1.wp.com/www.infoeuropefx.com/wp-content/uploads/2017/03/snapchat-shares.jpg?resize=620%2C330&ssl=1
+* http://www.romeconomics.com/wp-content/uploads/2013/08/EfficientMarkets.png"
+* https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Svm_max_sep_hyperplane_with_margin.png/220px-Svm_max_sep_hyperplane_with_margin.png
+* http://www.saedsayad.com/images/SVR_1.png
+* http://68.media.tumblr.com/0e459c9df3dc85c301ae41db5e058cb8/tumblr_inline_n9xq5hiRsC1rmpjcz.jpg
