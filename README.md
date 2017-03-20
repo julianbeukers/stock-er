@@ -43,30 +43,30 @@ It will be such that the distances between the closest points in each of the two
 </p>
 Support Vector Machine's can be used for regression as well. The support vector regression is a type of SVM that uses the space between data points as a margin of error and predicts the most likely next point in a dataset.
 Linear support vector regression model takes in 3 parameters: 
-	1. `kernel`: type of svm
-	2. `C`: penalty parameter of the error term
-	3. `gamma`: defines how far too far is.
-Two things are required when using an SVR, a line with the largest minimum margin and a line that correctly separates as many instances as possible. Since we can't have both, C determines how much we want the latter.
-```
-1e3 in svr_lin = SVR(kernel= 'linear', C= 1e3) #denotes 1000. 
-#Next we make a polynomial SVR because, in math folklore, the no free lunch theorem states that there are no guarantees for one optimization to work better than the other. So we'll try both.
-svr_poly = SVR(kernel= 'poly', C= 1e3, degree= 2)
-#Finally, we create one more SVR using a radial basis function. RBF defines similarity to be the Euclidean distance between two inputs If both are right on top of each other, the max similarity is one, if too far it is a zero. 
-svr_rbf = SVR(kernel= 'rbf', C= 1e3, gamma= 0.1)
-# To fit the data points in the models, we have 
-svr_rbf.fit(dates, prices) svr_lin.fit(dates, prices) svr_poly.fit(dates, prices)
-#Next, we plots the initial data points as black dots with the data label and plot each of our models as well plotting the initial datapoints plt.scatter(dates, prices, color= 'black', label= 'Data') 
-#The graphs are plotted with the help of SVR object in scikit-learn using the dates matrix as our parameter. Each will be a distinct color and and give them a distinct label. The predict_prices returns predictions from each of our models.
+1. `kernel`: type of svm
+2. `C`: penalty parameter of the error term
+3. `gamma`: defines how far too far is.
 
+Two things are required when using an SVR, a line with the largest minimum margin and a line that correctly separates as many instances as possible. Since we can't have both, C determines how much we want the latter.
+`1e3 in svr_lin = SVR(kernel= 'linear', C= 1e3) #denotes 1000.` 
+Next we make a polynomial SVR because, in math folklore, the no free lunch theorem states that there are no guarantees for one optimization to work better than the other. So we'll try both.
+`svr_poly = SVR(kernel= 'poly', C= 1e3, degree= 2)`
+Finally, we create one more SVR using a radial basis function. RBF defines similarity to be the Euclidean distance between two inputs If both are right on top of each other, the max similarity is one, if too far it is a zero. 
+`svr_rbf = SVR(kernel= 'rbf', C= 1e3, gamma= 0.1)`
+# To fit the data points in the models, we have 
+`svr_rbf.fit(dates, prices) svr_lin.fit(dates, prices) svr_poly.fit(dates, prices)`
+Next, we plots the initial data points as black dots with the data label and plot each of our models as well plotting the initial datapoints `plt.scatter(dates, prices, color= 'black', label= 'Data')` 
+The graphs are plotted with the help of SVR object in scikit-learn using the dates matrix as our parameter. Each will be a distinct color and and give them a distinct label. The `predict_prices` returns predictions from each of our models.
+```
 plt.plot(dates, svr_rbf.predict(dates), color= 'red', label= 'RBF model') # plotting the line made by the RBF kernel 
 plt.plot(dates,svr_lin.predict(dates), color= 'green', label= 'Linear model') # plotting the line made by linear kernel 
 plt.plot(dates,svr_poly.predict(dates), color= 'blue', label= 'Polynomial model') # plotting the line made by polynomial kernel 
-plt.xlabel('Date') # Setting the x-axis plt.ylabel('Price') # Setting the y-axis 
+plt.xlabel('Date') # Setting the x-axis plt.ylabel('Price') # Setting the y-axis
+```
 Finally, it returns predictions from each of our models return 
 
-svr_rbf.predict(x)[0], 
-svr_lin.predict(x)[0], svr_poly.predict(x)[0]
-```
+`svr_rbf.predict(x)[0], svr_lin.predict(x)[0], svr_poly.predict(x)[0]`
+
 # 4.0	Dependencies
 The dependencies that are installed in the program need to enable the user to collect the dataset with ease, calculate and interpret the numbers in the dataset, build a predictive model based on the past dataset and build a projective model for the future of the stock prices. When running in synchrony, the dependencies help in developing a support vector machine. A support vector machine primarily is a linear separator that takes data that is classified and attempts to predict and classify unclassified data. The support vector machine aid in the calculation of the support vector regression which can be calculated to accurately determine how each addition of data or alteration of market factors will alter the price of stocks.
 The four dependencies include: pip install csv : 
