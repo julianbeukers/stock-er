@@ -81,6 +81,8 @@ To read data from the stock prices (https://pypi.python.org/pypi/csv) pip instal
 </p>
 
 On analyzing the graph, we see that each of our models shows up in the graph and the RBF model seems to fit our data the best. Hence, we can use it's prediction in the command line to make stock predictions
+
 The support vector regression estimates how each addition or modification of data affects the prediction and outlook on the future prices of stock. The support vector regression can be developed by using either the linear function model, the polynomial functions model or the ration basis model. The different results can then be plotted on one or different graphs for analysis). These graphs are then compared with the actual data from the company’s history and the model that matches the historical data and trends can then be used to predict how the figures will react to market stimuli.
+
 The efficient market hypothesis states that the factors that determine the price of stocks in the future are in the future thus making the future prices of stocks random and unpredictable. However, using the stock market prediction methods outlined in this program simplifies the process of prediction by removing the random element out of stock market price futures. The use of support vector machines for classification and regression analyses gives a scientific element to the prediction of stock market prices rather than relying on hunches and intuition. A combination of the thus computed results and sound investment planning will, therefore, raise an investor’s chance of stock market success.
 # 7.0	Credits
