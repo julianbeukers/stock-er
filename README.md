@@ -16,8 +16,9 @@
 - [5.0	Usage](#usage)
 - [6.0 Result](#result)
 
-#introduction
-#purpose
+<a name="introduction"></a>
+1.0 Introduction
+1.1 Purpose of this document
 The purpose of this document is to give technical information about the design of an algorithm that can predict stock market price changes.
 ## 1.2	Intended Audience
 This paper targets stock market analysts, investors, and stockholders as it would make it more scientific to trade in the stock market.
@@ -29,7 +30,7 @@ The efficient market hypothesis posits that stock market prices arise from the c
 	<img src = "http://www.romeconomics.com/wp-content/uploads/2013/08/EfficientMarkets.png">
 </p>
 There are several categories of data that can be used when designing a price projection algorithm. These categories and factors summarize a company’s financial history in easy to crunch numbers. These factors are; sentiment analysis, past prices, sales growth and the dividends that the company has been paying out to its stockholders. These factors when summarized indicate a company’s vital statistics, and they can be manipulated to predict which circumstances will affect a company’s price in the future and how the company will respond to that. To create a software program that analyzes this data involves installing dependencies, collecting the dataset of the above factors, inputting the script of these factors into the program and finally analyzing the resultant graph. Stock market prices in the future can thus be predicted with relative accuracy by extrapolating the graph.
-
+<a name="functions_summary"></a>
 # 3.0 Summary of Functions
 
 ## 3.1.1 `get_data` method
