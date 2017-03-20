@@ -60,11 +60,16 @@ Linear support vector regression model takes in 3 parameters:
 
 Two things are required when using an SVR, a line with the largest minimum margin and a line that correctly separates as many instances as possible. Since we can't have both, C determines how much we want the latter.
 `1e3 in svr_lin = SVR(kernel= 'linear', C= 1e3) #denotes 1000.` 
+
 Next we make a polynomial SVR because, in math folklore, the no free lunch theorem states that there are no guarantees for one optimization to work better than the other. So we'll try both.
 `svr_poly = SVR(kernel= 'poly', C= 1e3, degree= 2)`
+
 Finally, we create one more SVR using a radial basis function. RBF defines similarity to be the Euclidean distance between two inputs If both are right on top of each other, the max similarity is one, if too far it is a zero. 
+
 `svr_rbf = SVR(kernel= 'rbf', C= 1e3, gamma= 0.1)` # To fit the data points in the models, we have 
+
 `svr_rbf.fit(dates, prices) svr_lin.fit(dates, prices) svr_poly.fit(dates, prices)`
+
 Next, we plots the initial data points as black dots with the data label and plot each of our models as well plotting the initial datapoints `plt.scatter(dates, prices, color= 'black', label= 'Data')` 
 The graphs are plotted with the help of SVR object in scikit-learn using the dates matrix as our parameter. Each will be a distinct color and and give them a distinct label. The `predict_prices` returns predictions from each of our models.
 ```
